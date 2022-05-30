@@ -1,0 +1,4 @@
+{
+  "id": "{{request.path.[1]}}",
+  "name": "{{request.query.name}}"
+}

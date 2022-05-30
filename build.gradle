@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.0.0-m2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def junitVersion = "5.7.1"
+
+dependencies {
+    implementation("org.junit.jupiter:junit-jupiter-api:5.7.0",
+            "io.rest-assured:rest-assured:4.3.1",
+            "io.rest-assured:json-schema-validator:4.3.1",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "com.github.tomakehurst:wiremock-jre8:2.32.0",
+            "org.assertj:assertj-core:3.21.0")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+}
+
+test {
+    useJUnitPlatform()
+}

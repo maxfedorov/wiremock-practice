@@ -1,0 +1,5 @@
+{
+  "id": "{{randomValue length=3 type='NUMERIC'}}",
+  "name": "{{randomValue length=10 type='ALPHABETIC' uppercase=true}}",
+  "dateOfBirth": "{{now offset='-35 years' format='yyyy-MM-dd'}}"
+}
